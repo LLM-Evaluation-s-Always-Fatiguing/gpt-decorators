@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "gpt-decorators"
+version = "0.0.1"
+description = "A bunch of useful decorators for GPT developers."
+authors = [
+    "The LEAF team (past and future) with the help of all our contributors <leaf@shanda.com>",
+]
+readme = "README.md"
+packages = [
+    { include = "gpt_decorators", from = "src"}
+]
+
+[tool.poetry.dependencies]
+python = ">=3.9"
+pydantic = ">=2.0.0"
+nose2 = ">=0.14.0"
+
+[tool.black]
+line-length = 119
+skip-magic-trailing-comma = true
+safe = true
+required-version = "23.12.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
